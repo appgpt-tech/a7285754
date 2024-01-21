@@ -16,6 +16,9 @@ Author: string;
 Authorgender: string;
 
 @Column({nullable: true})
+Authorbirthyear: string;
+
+@Column({nullable: true})
 Releasedate: string;
 
 @Column({nullable: true})
