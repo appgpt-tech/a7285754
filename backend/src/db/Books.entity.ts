@@ -16,6 +16,9 @@ Releasedate: string;
 Authorname: string;
 
 @Column({nullable: true})
+Authorgender: string;
+
+@Column({nullable: true})
 Id: string;
 
 
