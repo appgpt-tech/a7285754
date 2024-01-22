@@ -41,16 +41,15 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.Authorname }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.Booktitle }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Booktitle" />
-<TextField source="Releasedate" />
-<TextField source="Authorname" />
-<TextField source="Authorgender" />
+          <TextField source="Author" />
+<TextField source="Booktitle" />
+<TextField source="Summary" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,10 +59,9 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Booktitle"   />
-<TextInput source="Releasedate"   />
-<TextInput source="Authorname"   />
-<TextInput source="Authorgender"   />
+                          <TextInput source="Author"   />
+<TextInput source="Booktitle"   />
+<TextInput source="Summary"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -72,10 +70,9 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Booktitle"   />
-<TextInput source="Releasedate"   />
-<TextInput source="Authorname"   />
-<TextInput source="Authorgender"   />
+                                        <TextInput source="Author"   />
+<TextInput source="Booktitle"   />
+<TextInput source="Summary"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -83,7 +80,6 @@ export const BooksCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
