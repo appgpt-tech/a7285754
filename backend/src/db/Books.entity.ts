@@ -13,6 +13,9 @@ Booktitle: string;
 Releasedate: string;
 
 @Column({nullable: true})
+Authorname: string;
+
+@Column({nullable: true})
 Id: string;
 
 
