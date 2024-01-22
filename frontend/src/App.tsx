@@ -71,7 +71,7 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Books" options={{label:"books"}} 
+    <Resource name="Books" options={{label:"Books"}} 
 list={BooksList}
 create={BooksCreate}
 edit={BooksEdit}
