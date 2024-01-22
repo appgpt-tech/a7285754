@@ -16,6 +16,9 @@ Author: string;
 Rating: string;
 
 @Column({nullable: true})
+Copiessold: string;
+
+@Column({nullable: true})
 Id: string;
 
 
