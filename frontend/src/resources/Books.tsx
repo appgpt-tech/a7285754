@@ -41,15 +41,15 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.Booktitle }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.Title }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Author" />
-<TextField source="Booktitle" />
-<TextField source="Summary" />
+          <TextField source="Title" />
+<TextField source="Author" />
+<TextField source="Rating" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -59,9 +59,9 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Author"   />
-<TextInput source="Booktitle"   />
-<TextInput source="Summary"   />
+                          <TextInput source="Title"   />
+<TextInput source="Author"   />
+<TextInput source="Rating"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -70,9 +70,9 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Author"   />
-<TextInput source="Booktitle"   />
-<TextInput source="Summary"   />
+                                        <TextInput source="Title"   />
+<TextInput source="Author"   />
+<TextInput source="Rating"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
