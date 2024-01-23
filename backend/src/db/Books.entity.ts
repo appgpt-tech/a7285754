@@ -19,6 +19,9 @@ Numberofbookssold: string;
 Author: string;
 
 @Column({nullable: true})
+Numberofeditions: string;
+
+@Column({nullable: true})
 Id: string;
 
 
