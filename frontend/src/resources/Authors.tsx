@@ -50,6 +50,7 @@ export const AuthorsList = () => (
           <TextField source="Authorname" />
 <TextField source="Dateofbirth" />
 <TextField source="Gender" />
+<TextField source="Countryofbirth" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -62,6 +63,7 @@ export const AuthorsEdit = () => (
                           <TextInput source="Authorname"   />
 <TextInput source="Dateofbirth"   />
 <TextInput source="Gender"   />
+<TextInput source="Countryofbirth"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -73,6 +75,7 @@ export const AuthorsCreate = () => (
                                         <TextInput source="Authorname"   />
 <TextInput source="Dateofbirth"   />
 <TextInput source="Gender"   />
+<TextInput source="Countryofbirth"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -80,6 +83,7 @@ export const AuthorsCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 ,
