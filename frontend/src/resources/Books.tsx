@@ -41,16 +41,15 @@ const ListActions = () => (
 );
 const BooksTitle = () => {
   const record = useRecordContext();
-  return <span>Books {record ? `"${ record.Title }"` : ""}</span>;
+  return <span>Books {record ? `"${ record.Booktitle }"` : ""}</span>;
 };
 
 export const BooksList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Title" />
-<TextField source="Author" />
-<TextField source="Rating" />
-<TextField source="Copiessold" />
+          <TextField source="Booktitle" />
+<TextField source="Releasedate" />
+<TextField source="Numberofbookssold" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,10 +59,9 @@ export const BooksList = () => (
 export const BooksEdit = () => (
                     <Edit title={<BooksTitle />}>
                       <SimpleForm>
-                          <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="Rating"   />
-<TextInput source="Copiessold"   />
+                          <TextInput source="Booktitle"   />
+<TextInput source="Releasedate"   />
+<TextInput source="Numberofbookssold"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -72,10 +70,9 @@ export const BooksEdit = () => (
 export const BooksCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Title"   />
-<TextInput source="Author"   />
-<TextInput source="Rating"   />
-<TextInput source="Copiessold"   />
+                                        <TextInput source="Booktitle"   />
+<TextInput source="Releasedate"   />
+<TextInput source="Numberofbookssold"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -83,7 +80,6 @@ export const BooksCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,
