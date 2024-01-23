@@ -49,7 +49,7 @@ export const BooksList = () => (
         <DatagridConfigurable>
           <TextField source="Booktitle" />
 <TextField source="Releasedate" />
-<NumberField source="Numberofbookssold" />
+<TextField source="Numberofbookssold" />
 <TextField source="Author" />
 <TextField source="Genre" />
 <NumberField source="Id" /><EditButton />
@@ -63,7 +63,7 @@ export const BooksEdit = () => (
                       <SimpleForm>
                           <TextInput source="Booktitle"   />
 <TextInput source="Releasedate"   />
-<NumberInput source="Numberofbookssold"   />
+<TextInput source="Numberofbookssold"   />
 <TextInput source="Author"   />
 <TextInput source="Genre"   />
 <NumberInput source="Id"   disabled/>
@@ -76,7 +76,7 @@ export const BooksCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="Booktitle"   />
 <TextInput source="Releasedate"   />
-<NumberInput source="Numberofbookssold"   />
+<TextInput source="Numberofbookssold"   />
 <TextInput source="Author"   />
 <TextInput source="Genre"   />
 <NumberInput source="Id"   disabled/>
