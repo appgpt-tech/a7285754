@@ -16,6 +16,9 @@ Dateofbirth: string;
 Gender: string;
 
 @Column({nullable: true})
+Countryofbirth: string;
+
+@Column({nullable: true})
 Id: string;
 
 
