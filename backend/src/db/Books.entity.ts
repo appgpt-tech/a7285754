@@ -13,9 +13,6 @@ Title: string;
 Author: string;
 
 @Column({nullable: true})
-Isbn: string;
-
-@Column({nullable: true})
 Id: string;
 
 
