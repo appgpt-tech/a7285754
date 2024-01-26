@@ -49,6 +49,7 @@ export const BooksList = () => (
         <DatagridConfigurable>
           <TextField source="Title" />
 <TextField source="Author" />
+<TextField source="Isbn" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -60,6 +61,7 @@ export const BooksEdit = () => (
                       <SimpleForm>
                           <TextInput source="Title"   />
 <TextInput source="Author"   />
+<TextInput source="Isbn"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -70,6 +72,7 @@ export const BooksCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="Title"   />
 <TextInput source="Author"   />
+<TextInput source="Isbn"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -77,6 +80,7 @@ export const BooksCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 
