@@ -24,7 +24,7 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"Title":"Generated Value for Title","Author":"Generated Value for Author","ISBN":"Generated Value for ISBN","Copies Sold":"Generated Value for Copies Sold","Current Edition":"Generated Value for Current Edition","Issue Date":"Generated Value for Issue Date","Genre":"Generated Value for Genre"},{"Title":"Generated Value for Title","Author":"Generated Value for Author","ISBN":"Generated Value for ISBN","Copies Sold":"Generated Value for Copies Sold","Current Edition":"Generated Value for Current Edition","Issue Date":"Generated Value for Issue Date","Genre":"Generated Value for Genre"},{"Title":"Generated Value for Title","Author":"Generated Value for Author","ISBN":"Generated Value for ISBN","Copies Sold":"Generated Value for Copies Sold","Current Edition":"Generated Value for Current Edition","Issue Date":"Generated Value for Issue Date","Genre":"Generated Value for Genre"}]};
+    let data: any = {"Books":[{"Title":"The Great Book","Author":"John Doe","ISBN":1234567890,"Copies Sold":500,"Issue Date":"2022-01-01 00:00:00"},{"Title":"Libby App Design","Author":"Jane Doe","ISBN":1234567891,"Copies Sold":300,"Issue Date":"2022-02-01 00:00:00"},{"Title":"Mastering JSON","Author":"Sam Smith","ISBN":1234567892,"Copies Sold":1000,"Issue Date":"2022-03-01 00:00:00"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
