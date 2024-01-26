@@ -19,6 +19,9 @@ Isbn: string;
 Copiessold: string;
 
 @Column({nullable: true})
+Currentedition: string;
+
+@Column({nullable: true})
 Id: string;
 
 
