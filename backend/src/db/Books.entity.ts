@@ -22,6 +22,9 @@ Copiessold: string;
 Currentedition: string;
 
 @Column({nullable: true})
+Issuedate: string;
+
+@Column({nullable: true})
 Id: string;
 
 
