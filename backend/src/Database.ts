@@ -4,6 +4,7 @@ import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
 import { BooksEntity } from "./db/Books.entity";
+import { AuthorsEntity } from "./db/Authors.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -14,7 +15,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, BooksEntity];
+    dbConfig.entities = [SettingsEntity, BooksEntity, AuthorsEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -24,14 +25,15 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"Books":[{"Title":"Life of Pi","Author":"Yann Martel","ISBN":"9783141592653","CopiesSold":1000000,"IssueDate":"2002-06-04","Genre":"Adventure","Rating":4},{"Title":"1984","Author":"George Orwell","ISBN":"9780123456789","CopiesSold":5000000,"IssueDate":"1949-06-08","Genre":"Dystopian","Rating":5},{"Title":"The Great Gatsby","Author":"F. Scott Fitzgerald","ISBN":"9789876543210","CopiesSold":2500000,"IssueDate":"1925-04-10","Genre":"Tragedy","Rating":3}]};
+    let data: any = {"Books":[{"bookTitle":"The Test Title","releaseDate":"2022-03-01","numberOfBooksSold":5000,"author":"Test Author","numberOfEditions":3},{"bookTitle":"Another Test Title","releaseDate":"2022-03-01","numberOfBooksSold":3000,"author":"Another Test Author","numberOfEditions":2},{"bookTitle":"Yet another test title","releaseDate":"2022-03-01","numberOfBooksSold":7000,"author":"Yet another Test Author","numberOfEditions":1}],"Authors":[{"authorName":"Test Author","dateOfBirth":"1990-01-01","gender":"Male","countryOfBirth":"Sample Country"},{"authorName":"Another Test Author","dateOfBirth":"1980-01-01","gender":"Female","countryOfBirth":"Another Sample Country"},{"authorName":"Yet Another Test Author","dateOfBirth":"1985-01-01","gender":"Non-binary","countryOfBirth":"Yet Another Sample Country"}]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("BooksEntity", data.Books); 
+      await this.SeedResource("BooksEntity", data.Books);
+await this.SeedResource("AuthorsEntity", data.Authors); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",
