@@ -7,19 +7,16 @@ export class AuthorsEntity {
   id: number;
 
   @Column({nullable: true})
-Authorname: string;
+authorName: string;
 
 @Column({nullable: true})
-Dateofbirth: string;
+dateOfBirth: string;
 
 @Column({nullable: true})
-Gender: string;
+gender: string;
 
 @Column({nullable: true})
-Countryofbirth: string;
-
-@Column({nullable: true})
-Id: string;
+countryOfBirth: string;
 
 
 }
