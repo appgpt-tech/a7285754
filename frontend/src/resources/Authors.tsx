@@ -41,17 +41,17 @@ const ListActions = () => (
 );
 const AuthorsTitle = () => {
   const record = useRecordContext();
-  return <span>Authors {record ? `"${ record.Authorname }"` : ""}</span>;
+  return <span>Authors {record ? `"${ record.id }"` : ""}</span>;
 };
 
 export const AuthorsList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Authorname" />
-<TextField source="Dateofbirth" />
-<TextField source="Gender" />
-<TextField source="Countryofbirth" />
-<NumberField source="Id" /><EditButton />
+          <TextField source="authorName" />
+<TextField source="dateOfBirth" />
+<TextField source="gender" />
+<TextField source="countryOfBirth" />
+<NumberField source="id" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -60,11 +60,11 @@ export const AuthorsList = () => (
 export const AuthorsEdit = () => (
                     <Edit title={<AuthorsTitle />}>
                       <SimpleForm>
-                          <TextInput source="Authorname"   />
-<TextInput source="Dateofbirth"   />
-<TextInput source="Gender"   />
-<TextInput source="Countryofbirth"   />
-<NumberInput source="Id"   disabled/>
+                          <TextInput source="authorName"   />
+<TextInput source="dateOfBirth"   />
+<TextInput source="gender"   />
+<TextInput source="countryOfBirth"   />
+<NumberInput source="id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -72,11 +72,11 @@ export const AuthorsEdit = () => (
 export const AuthorsCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Authorname"   />
-<TextInput source="Dateofbirth"   />
-<TextInput source="Gender"   />
-<TextInput source="Countryofbirth"   />
-<NumberInput source="Id"   disabled/>
+                                        <TextInput source="authorName"   />
+<TextInput source="dateOfBirth"   />
+<TextInput source="gender"   />
+<TextInput source="countryOfBirth"   />
+<NumberInput source="id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
